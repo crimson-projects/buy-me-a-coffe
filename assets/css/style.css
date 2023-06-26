@@ -1,0 +1,570 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+/* VARIABLES */
+:root{
+    --background: #FFFCE6;
+    --font-medium-weight: 700;
+    --font-size-of-title: 80px;
+    --buttons-color: #FFDD00;
+    --list-weight: 500;
+    --p-tag-size: 21px
+}
+/* HEADER SECTION */
+header{
+    max-width: 1130px;
+    height: 9.8vh;
+    margin: 0 auto;
+    border-radius: 50px;
+    position: relative;
+    top: 45px;
+}
+
+header nav{
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+header nav ul{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul div{
+    display: flex;
+    align-items: center;
+}
+
+.logo_faq{
+    width: 240px;
+    justify-content: space-around;
+    font-weight: var(--list-weight);
+}
+
+.reg_links{
+    width: 170px;
+    justify-content: space-around;
+    font-weight: var(--list-weight);
+}
+
+.reg_links li:last-child{
+    background-color: var(--buttons-color);
+    padding: 8px 15px;
+    border-radius: 50px;
+}
+
+/* HOME SECTION */
+
+#home{
+    height: 160vh;
+    margin-top: 30px;
+}
+
+ #donations , #memberships , #extras , #designed {
+    height: 110vh;
+    position: relative;
+    top: 45px;
+}
+
+#donations {
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+#memberships{
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);    
+}
+
+#extras{
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);        
+}
+
+#designed{
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .home__container , .donations__container , .memberships__container , .extras__container  , .designed__container , .footer__container{
+    position: absolute;
+    width: 95%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#home .home__container .home__content .home__title   h1{
+    font-size: var(--font-size-of-title);
+    font-weight: var(--font-medium-weight);
+}
+
+#home .home__container .home__content .home__title p{
+    font-size: var(--p-tag-size);
+    margin: 25px 0;
+}
+
+.home__bottom-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 180px;
+}
+
+.home__bottom-buttons input {
+    width: 94%;
+    padding: 15px 2%;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.228);
+}
+
+.home__bottom-buttons button{
+    width: 94%;
+    border-radius: 50px;
+    padding: 15px 2%;
+    outline: none;
+    border: none;
+    background-color: var(--buttons-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.donations__content , .memberships__content , .extras__content , .designed__content , .footer__content{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.donations__content .donations__title  h1{
+    font-size: 60px;
+}
+
+.memberships__title h1{
+    font-size: 60px;
+}
+
+.donations__content .donations__title p{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.memberships__title p{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.extras__title h1{
+    font-size: 60px;
+}
+
+.extras__title p{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.designed__content h1{
+    font-size: 40px;
+    width: 370px;
+    position: relative;
+    top: 60px;
+    margin-bottom: 60px;
+}
+
+.designed__title{
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.designed__title div h3{
+    font-size: 30px;
+}
+
+.designed__title div p{
+    font-size: 20px;
+    width: 340px;
+}
+
+.designed__bottom-buttons{
+    margin-top: 20px;
+}
+
+.designed__bottom-buttons button{
+    width: 94%;
+    border-radius: 50px;
+    padding: 15px 2%;
+    outline: none;
+    border: none;
+    background-color: var(--buttons-color);
+    font-size: 20px;
+}
+
+.designed__bottom-buttons p{
+    font-size: 20px;   
+    margin-top: 10px;
+}
+
+.home__data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+    z-index: 99;
+}
+
+.home__data-tags{
+    display: grid;
+    grid-template-columns: repeat(8 , max-content);
+    width: 60%;
+    grid-column-gap: 40px;
+    text-align: center;
+}
+
+.home__data-pictures{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-column-gap: 50px;
+    position: absolute;
+    top: 50px;
+}
+
+.home__data-pictures > div{
+    display: flex;
+    height: 300px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.home__data-pictures > div > p , span{
+    width: 184px;
+    text-align: initial;
+}
+
+.home__data-pictures > div > img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+footer{
+    height: 30vh;
+    position: relative;   
+    top: 220px;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__content{
+    height: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+
+.footer__links > ul{
+    display: grid;
+    grid-template-columns: repeat(3 , max-content);
+    grid-gap: 10px;
+    grid-column-gap: 20px;
+}
+
+.footer__links ul li{
+    font-weight: 700;
+    text-align: center;
+}
+
+.footer__social-links  i{
+    font-size: 35px;
+    margin-left: 5px;
+}
+
+/* Dropdown menu */
+
+
+
+li > ul{
+    display: flex;
+    justify-content: space-around;    
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50% , -120%);
+    width: 10rem;
+    height: 15rem;
+    line-height: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.243);
+    padding: 10px 2px;
+}
+
+.footer__links ul li  .hide{
+    display: none;
+}
+.menu{
+    display: none;
+}
+
+@media screen and (max-width: 340px) {
+    #home{
+        height: 220vh;
+        margin-top: 80px;
+    }
+
+     #donations , #memberships , #extras , #designed{
+        height: 70vh;
+    }
+    header nav{
+        width: 100%;
+        left: 35%;
+    }
+
+    .menu{
+        display: block;
+    }
+    .logo_faq{
+        width: 180px;
+    }
+
+    .home__data-pictures{
+        grid-template-columns: repeat(1 , max-content);
+    }
+    .home__data-tags{
+        display: none;
+    }
+
+    .logo_faq > li{
+        display: none;
+    }
+    .reg_links{
+        width: 120px;
+        display: none;
+    }
+
+    ul > div{
+        justify-content: space-between;
+    }
+    #home > .home__container {
+        width: 80%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    #home > .home__container > .home__content > .home__title > h1{
+        font-size: 30px;
+    }
+
+    #home > .home__container > .home__content > .home__title > p{
+        font-size: 14px;
+    }
+
+    .home__bottom-buttons input {
+        padding: 8px 2%;
+    }
+    .home__bottom-buttons button{
+        padding: 8px 2%;
+    }
+    .home__bottom-buttons p{
+        font-size: 18px;
+    }
+    .donations__title, 
+    .memberships__title, 
+    .extras__title h3{
+        font-size: 15px;
+    }
+
+    .donations__content > .donations__title > h1{
+        font-size: 25px;
+    }
+    .donations__content > .donations__title > p{
+        font-size: 14px;
+    }
+
+    .memberships__title > h1 ,
+    .extras__title > h1{
+        font-size: 25px;
+    }
+
+    .extras__title > p,
+    .memberships__title > p,
+    .donations__title > p{
+        font-size: 14px;
+    }
+
+    .designed__content > h1{
+        font-size: 25px;
+        width: 300px;
+    }
+
+    .designed__title{
+        height: 400px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .designed__title div h3{
+        font-size: 20px;
+    }
+    
+    .designed__title div p{
+        font-size: 14px;
+        width: 250px;
+    }
+    
+    .designed__bottom-buttons{
+        margin-top: 20px;
+    }
+    
+    .designed__bottom-buttons button{
+        width: 90%;
+        padding: 8px 2%;
+    }
+    
+    .designed__bottom-buttons p{
+        font-size: 16px;   
+        margin-top: 10px;
+    }
+    
+    .footer__links > ul {
+        display: grid;
+        grid-template-columns: repeat(2 , max-content);
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    header nav{
+        left: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #home , #designed , #donations , #memberships{
+        height: 120vh;
+    } 
+
+    #extras{
+        height: 145vh;
+    }
+
+    .home__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .home__title{
+        width: 80%;
+    }
+
+    .home__bottom-buttons{
+        width: 80%;
+    }
+    .home__bottom-buttons > input {
+        width: 35%;
+    }
+    .home__bottom-buttons > button {
+        width: 35%;
+    }
+    .donations__content > .donations__image > img{
+        width: 50%;
+    }
+    .memberships__content > .memberships__image > img{
+        width: 50%;
+    }
+    .extras__content > .extras__image > img{
+        width: 50%;
+    }
+    .donations__content > .donations__title {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .donations__content > .donations__title > p{
+        width: 60%;
+        text-align: center;
+    }
+    .memberships__container{
+        margin-top: 30px;
+    }
+    .memberships__content > .memberships__title{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;        
+    }
+    .memberships__content > .memberships__title > p{
+        width: 60%;
+        text-align: center;
+    }
+
+    .extras__content > .extras__title{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;                
+    }
+    .extras__content > .extras__title > p{
+        width: 60%;
+        text-align: center;
+    }
+}
